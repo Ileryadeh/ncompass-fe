@@ -43,6 +43,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 2rem;
   }
 
   &__stats-content {
@@ -101,7 +102,7 @@
     padding: 16px;
     border: none;
     border-radius: 0.75rem;
-    background-image: radial-gradient(83.975% 80.9% at 50% 50%, #AEDA68 67.31%, #91D12D 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #aeda68 67.31134057044983%, #91d12d 100%);
     color: #1A2643;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 25px;
