@@ -1,19 +1,45 @@
 .hero {
-  @apply flex flex-col items-center gap-4 text-center px-6 py-16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
 
-  &__title {
-    @apply text-4xl font-bold text-gray-900;
-  }
+.hero__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+}
 
-  &__subtitle {
-    @apply text-lg text-gray-600 max-w-xl;
-  }
+.hero__subtitle {
+  font-size: 1.125rem;
+  color: #4B5563;
+  max-width: 36rem;
+}
 
-  &__cta {
-    @apply inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors no-underline;
-  }
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #2563EB;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
 
-  &__cta-icon {
-    @apply w-4 h-4;
-  }
+.hero__cta:hover {
+  background-color: #1D4ED8;
+}
+
+.hero__cta-icon {
+  width: 1rem;
+  height: 1rem;
 }

@@ -1,44 +1,139 @@
 .about {
-  @apply w-full bg-white px-6 py-20;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 5rem 1.5rem;
   scroll-margin-top: 90px;
 
-  &__section {
-    @apply mx-auto grid w-full max-w-[1180px] grid-cols-1 items-center gap-10 py-14;
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    @media (min-width: 900px) {
-      @apply grid-cols-2 gap-16;
-    }
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2.5rem;
   }
 
   &__content {
-    @apply flex flex-col items-start gap-5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 
-  &__eyebrow {
-    @apply m-0 font-bold uppercase;
-    color: #91D12D;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 18px;
+  &__stats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
-  &__title {
-    @apply m-0 leading-tight;
-    color: #060F24;
+  &__stats-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__headline {
+    margin: 0;
+    color: #C5E595;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 52px;
+    font-size: clamp(3rem, 4.5vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.02;
+  }
+
+  &__banner {
+    margin: 0;
+    max-width: 980px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(3rem, 4.5vw, 5.5rem);
     font-weight: 700;
+    line-height: 1.02;
   }
 
-  &__copy {
-    @apply m-0 max-w-xl leading-relaxed;
-    color: #1A2643;
+  &__banner-accent {
+    color: #aeda68;
+  }
+
+  &__description {
+    max-width: 34rem;
+    margin: 0;
+    color: #ffffff;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 26px;
-    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 1.85;
   }
 
   &__image {
-    @apply h-auto w-full object-cover;
-    border-radius: 8px;
+    width: min(100%, 500px);
+    height: 360px;
+    justify-self: center;
+    object-fit: contain;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    min-width: 228px;
+    min-height: 60px;
+    padding: 16px;
+    border: none;
+    border-radius: 0.75rem;
+    background-image: radial-gradient(83.975% 80.9% at 50% 50%, #AEDA68 67.31%, #91D12D 100%);
+    color: #1A2643;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  @media (min-width: 900px) {
+    &__section {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 500px);
+      gap: 4rem;
+    }
+
+    &__section--journey {
+      grid-template-columns: minmax(320px, 500px) minmax(0, 1fr);
+    }
+
+    &__section--model &__content {
+      order: 1;
+    }
+
+    &__section--model &__image {
+      order: 2;
+    }
+
+    &__section--journey &__image {
+      order: 1;
+    }
+
+    &__section--journey &__content {
+      order: 2;
+    }
   }
 }

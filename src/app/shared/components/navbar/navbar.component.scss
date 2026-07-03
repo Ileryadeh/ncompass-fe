@@ -1,38 +1,71 @@
 :host {
-  @apply sticky top-0 z-50 block;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: block;
+  width: 100%;
 }
 
 .navbar {
-  @apply w-full h-[90px] flex justify-center items-center flex-row overflow-hidden;
-  @apply bg-[#060F24] border-b border-solid border-[#586176];
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #060F24;
+  border-bottom: 1px solid rgba(88, 97, 118, 0.35);
+}
 
-  &__inner {
-    @apply w-full max-w-[1353px] h-[93px] flex justify-start items-center flex-row gap-[112px];
-    @apply py-4 px-9;
-  }
+.navbar__inner {
+  width: 100%;
+  max-width: 1353px;
+  height: 93px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7rem;
+  padding: 1rem 2.25rem;
+}
 
-  &__logo {
-    @apply w-[342px] h-[61px] object-cover;
-  }
+.navbar__logo {
+  width: 342px;
+  height: 61px;
+  object-fit: cover;
+}
 
-  &__links {
-    @apply flex justify-start items-center flex-row gap-4;
-  }
+.navbar__links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
 
-  &__link {
-    @apply flex justify-center items-center flex-row gap-2.5 p-2;
-    @apply text-white text-2xl leading-tight no-underline;
-    font-family: 'JetBrains Mono', monospace;
-  }
+.navbar__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  &__cta {
-    @apply w-[140px] h-5 flex justify-center items-center flex-row gap-2.5 p-4 rounded-lg no-underline;
-    background-image: radial-gradient(83.975% 80.9% at 50% 50%, #AEDA68 67.31%, #91D12D 100%);
-    color: #1A2643;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    padding: 16px 16px;
-  }
+.navbar__cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 16px;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  background-image: radial-gradient(83.975% 80.9% at 50% 50%, #AEDA68 67.31%, #91D12D 100%);
+  color: #1A2643;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
 }

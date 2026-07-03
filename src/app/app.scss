@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+:host ::ng-deep app-home,
+:host ::ng-deep app-about {
+  display: block;
+  width: 100%;
+}
