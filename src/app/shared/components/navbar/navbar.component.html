@@ -1,0 +1,13 @@
+<header class="navbar">
+  <div class="navbar__inner">
+    <img class="navbar__logo" src="ntv-logo.png" alt="Company logo" />
+
+    <nav class="navbar__links">
+      @for (link of navLinks(); track link.path) {
+        <a class="navbar__link" [href]="link.path">{{ link.label }}</a>
+      }
+    </nav>
+
+    <a class="navbar__cta" href="/contact">Call Us Today!</a>
+  </div>
+</header>

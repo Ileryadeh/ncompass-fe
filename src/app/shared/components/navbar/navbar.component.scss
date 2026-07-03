@@ -1,0 +1,38 @@
+:host {
+  @apply sticky top-0 z-50 block;
+}
+
+.navbar {
+  @apply w-full h-[90px] flex justify-center items-center flex-row overflow-hidden;
+  @apply bg-[#060F24] border-b border-solid border-[#586176];
+
+  &__inner {
+    @apply w-full max-w-[1353px] h-[93px] flex justify-start items-center flex-row gap-[112px];
+    @apply py-4 px-9;
+  }
+
+  &__logo {
+    @apply w-[342px] h-[61px] object-cover;
+  }
+
+  &__links {
+    @apply flex justify-start items-center flex-row gap-4;
+  }
+
+  &__link {
+    @apply flex justify-center items-center flex-row gap-2.5 p-2;
+    @apply text-white text-2xl leading-tight no-underline;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  &__cta {
+    @apply w-[140px] h-5 flex justify-center items-center flex-row gap-2.5 p-4 rounded-lg no-underline;
+    background-image: radial-gradient(83.975% 80.9% at 50% 50%, #AEDA68 67.31%, #91D12D 100%);
+    color: #1A2643;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 16px 16px;
+  }
+}

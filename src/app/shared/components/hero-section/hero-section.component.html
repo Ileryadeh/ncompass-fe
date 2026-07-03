@@ -1,0 +1,9 @@
+<section class="hero">
+  <h1 class="hero__title">{{ data().title }}</h1>
+  <p class="hero__subtitle">{{ data().subtitle }}</p>
+
+  <a class="hero__cta" [href]="data().ctaLink">
+    {{ data().ctaLabel }}
+    <svg class="hero__cta-icon"><use href="assets/sprite.svg#icon-arrow-right" /></svg>
+  </a>
+</section>

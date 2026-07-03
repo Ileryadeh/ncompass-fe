@@ -1,0 +1,44 @@
+.about {
+  @apply w-full bg-white px-6 py-20;
+  scroll-margin-top: 90px;
+
+  &__section {
+    @apply mx-auto grid w-full max-w-[1180px] grid-cols-1 items-center gap-10 py-14;
+
+    @media (min-width: 900px) {
+      @apply grid-cols-2 gap-16;
+    }
+  }
+
+  &__content {
+    @apply flex flex-col items-start gap-5;
+  }
+
+  &__eyebrow {
+    @apply m-0 font-bold uppercase;
+    color: #91D12D;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+  }
+
+  &__title {
+    @apply m-0 leading-tight;
+    color: #060F24;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+  }
+
+  &__copy {
+    @apply m-0 max-w-xl leading-relaxed;
+    color: #1A2643;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+  }
+
+  &__image {
+    @apply h-auto w-full object-cover;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,15 @@
+.feature-card {
+  @apply flex flex-col items-start gap-3 p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow;
+
+  &__icon {
+    @apply w-8 h-8 text-blue-600;
+  }
+
+  &__heading {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  &__description {
+    @apply text-sm text-gray-600;
+  }
+}

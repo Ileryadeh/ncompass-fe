@@ -1,0 +1,19 @@
+.hero {
+  @apply flex flex-col items-center gap-4 text-center px-6 py-16;
+
+  &__title {
+    @apply text-4xl font-bold text-gray-900;
+  }
+
+  &__subtitle {
+    @apply text-lg text-gray-600 max-w-xl;
+  }
+
+  &__cta {
+    @apply inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors no-underline;
+  }
+
+  &__cta-icon {
+    @apply w-4 h-4;
+  }
+}

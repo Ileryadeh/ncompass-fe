@@ -1,0 +1,8 @@
+<article class="feature-card">
+  <svg class="feature-card__icon">
+    <use [attr.href]="'assets/sprite.svg#' + data().iconName" />
+  </svg>
+
+  <h3 class="feature-card__heading">{{ data().heading }}</h3>
+  <p class="feature-card__description">{{ data().description }}</p>
+</article>
