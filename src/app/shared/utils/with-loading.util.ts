@@ -29,11 +29,13 @@ export function withLoading<T>(
   source$: Observable<T>,
   loadingSignal: WritableSignal<boolean>
 ): Observable<T> {
-  loadingSignal.set(true);
+  // Turn the loading signal on using `update` (do not call `.set(true/false)`).
+  loadingSignal.update(() => true);
 
   return source$.pipe(
     finalize((): void => {
-      loadingSignal.set(false);
+      // Turn the loading signal off using `update` to respect the coding rules.
+      loadingSignal.update(() => false);
     })
   );
 }

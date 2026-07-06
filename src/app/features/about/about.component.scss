@@ -1,8 +1,6 @@
 .about {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 5rem 1.5rem;
+  @apply relative w-full overflow-hidden py-20 px-6;
+  /* keep scroll margin as it's not a Tailwind utility */
   scroll-margin-top: 90px;
 
   &__bg {
@@ -15,14 +13,7 @@
   }
 
   &__inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
+    @apply relative z-10 flex flex-col gap-20 w-full max-w-[1180px] mx-auto;
   }
 
   &__section {
@@ -33,17 +24,11 @@
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    @apply flex flex-col items-start gap-6;
   }
 
   &__stats {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2rem;
+    @apply flex justify-center w-full mt-8;
   }
 
   &__stats-content {
@@ -93,10 +78,7 @@
   }
 
   &__cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.625rem;
+    @apply inline-flex items-center justify-center gap-2;
     min-width: 228px;
     min-height: 60px;
     padding: 16px;

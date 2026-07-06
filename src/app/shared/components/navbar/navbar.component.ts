@@ -12,9 +12,14 @@ import { NAV_LINKS } from '../../utils/app.constant';
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
   // 3. Signals
+  /**
+   * Signal containing the navigation links used in the navbar.
+   * @public
+   * @readonly
+   */
   public readonly navLinks = signal(NAV_LINKS);
 }

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 
 // Local
 import { HomeDto, FeatureCardDto } from '../dto/home.dto';
+import { HOME_ENDPOINT, HOME_FEATURES_ENDPOINT } from '../../shared/constants/api.constant';
 
 /**
  * Handles all HTTP communication for the home feature.
@@ -22,7 +23,7 @@ export class HomeService {
    * @returns {Observable<HomeDto>} raw hero payload
    */
   public getHomeData(): Observable<HomeDto> {
-    return this.http.get<HomeDto>('/api/home');
+    return this.http.get<HomeDto>(HOME_ENDPOINT);
   }
 
   /**
@@ -30,6 +31,6 @@ export class HomeService {
    * @returns {Observable<FeatureCardDto[]>} raw feature card payloads
    */
   public getFeatureCards(): Observable<FeatureCardDto[]> {
-    return this.http.get<FeatureCardDto[]>('/api/home/features');
+    return this.http.get<FeatureCardDto[]>(HOME_FEATURES_ENDPOINT);
   }
 }

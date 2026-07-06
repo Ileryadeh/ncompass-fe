@@ -5,62 +5,33 @@
   display: block;
   width: 100%;
 }
-
 .navbar {
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  @apply w-full h-[90px] flex justify-center items-center overflow-hidden;
   background-color: #060F24;
   border-bottom: 1px solid rgba(88, 97, 118, 0.35);
 }
 
 .navbar__inner {
-  width: 100%;
-  max-width: 1353px;
-  height: 93px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 7rem;
-  padding: 1rem 2.25rem;
+  @apply w-full max-w-[1353px] h-[93px] flex justify-start items-center gap-28 px-9;
 }
 
 .navbar__logo {
-  width: 342px;
-  height: 61px;
-  object-fit: cover;
+  @apply w-[342px] h-[61px] object-cover;
 }
 
 .navbar__links {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
+  @apply flex justify-start items-center gap-4;
 }
 
 .navbar__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 0.5rem;
-  color: #ffffff;
-  font-size: 1.5rem;
+  @apply flex justify-center items-center gap-2 p-2 text-white text-2xl;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.1;
   text-decoration: none;
-  font-family: 'JetBrains Mono', monospace;
 }
 
 .navbar__cta {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 16px;
-  border-radius: 0.75rem;
+  @apply inline-flex justify-center items-center gap-2 p-4 rounded-xl;
   text-decoration: none;
   background: radial-gradient(60% 50% at 50% 50%, #aeda68 67.31134057044983%, #91d12d 100%);
   color: #1A2643;

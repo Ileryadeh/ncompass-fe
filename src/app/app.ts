@@ -8,7 +8,7 @@ import { AboutComponent } from './features/about/about.component';
   standalone: true,
   imports: [NavbarComponent, HomeComponent, AboutComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
   protected readonly title = signal('ncompass-clone');

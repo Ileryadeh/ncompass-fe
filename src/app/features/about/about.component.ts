@@ -3,12 +3,22 @@ import { Component } from '@angular/core';
 
 /**
  * About page sections for the N-Compass model and company journey.
+ * @public
  */
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss',
+  styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {}
+export class AboutComponent {
+  /**
+   * Component initialization placeholder for future hooks.
+   * @public
+   * @returns {void}
+   */
+  public ngOnInit(): void {
+    return undefined as unknown as void;
+  }
+}

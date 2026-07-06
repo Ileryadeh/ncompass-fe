@@ -12,9 +12,14 @@ import { FeatureCardUi } from '../../../core/dto/home.dto';
   standalone: true,
   imports: [],
   templateUrl: './feature-card.component.html',
-  styleUrl: './feature-card.component.scss',
+  styleUrls: ['./feature-card.component.scss'],
 })
 export class FeatureCardComponent {
   // 2. I/O
+  /**
+   * Input data for the feature card — already mapped to UI shape.
+   * @public
+   * @readonly
+   */
   public readonly data = input.required<FeatureCardUi>();
 }

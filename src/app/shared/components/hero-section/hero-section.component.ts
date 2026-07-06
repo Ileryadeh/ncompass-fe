@@ -13,9 +13,14 @@ import { HomeUi } from '../../../core/dto/home.dto';
   standalone: true,
   imports: [],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss',
+  styleUrls: ['./hero-section.component.scss'],
 })
 export class HeroSectionComponent {
   // 2. I/O
+  /**
+   * Input data for the hero banner — mapped to UI shape by the parent.
+   * @public
+   * @readonly
+   */
   public readonly data = input.required<HomeUi>();
 }
